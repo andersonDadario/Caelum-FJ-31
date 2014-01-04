@@ -10,7 +10,7 @@ import br.com.caelum.loja.serializacao.Livro;
 public class TestaLeituraDeObjetos {
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		ObjectInputStream ois = 
-				new ObjectInputStream(new FileInputStream("livros_flavio.txt"));
+				new ObjectInputStream(new FileInputStream("livros.txt"));
 		List<Livro> livros = (List<Livro>) ois.readObject();
 		
 		for(Livro l : livros){
