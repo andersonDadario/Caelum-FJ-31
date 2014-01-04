@@ -1,1 +1,29 @@
 Paulo Alves
+
+Serialization
+- implements Serializable
+- transient variable
+- serialVersionUID
+
+RMI
+- Stub
+	- Implementa interface com assinatura dos métodos
+	da classe que roda no servidor
+- Porta padrão 1099
+- Apontar servidor
+	Run Configurations -> Arguments -> VM arguments
+	-Djava.rmi.server.hostname=<ip do servidor>
+
+Application Server (AS)
+- Glassfish = Reference Implementation (RI)
+- Jboss instalation
+	- bin/standalone.sh
+	- http://localhost:9990/
+	- Eclipse WTP Plugin (JBoss AS Tools)
+		http://www.eclipse.org/webtools/
+		CTRL 3 + Servers
+
+Enterprise Java Bean (EJB)
+[CarrinhoBean]
+@Remote(Carrinho.class)
+@Stateful
