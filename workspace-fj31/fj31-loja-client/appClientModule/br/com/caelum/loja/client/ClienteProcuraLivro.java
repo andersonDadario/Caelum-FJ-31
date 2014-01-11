@@ -4,7 +4,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import br.com.caelum.loja.entity.Livro;
-import br.com.caelum.loja.session.Carrinho;
 import br.com.caelum.loja.session.GerenciadorLoja;
 
 public class ClienteProcuraLivro {
