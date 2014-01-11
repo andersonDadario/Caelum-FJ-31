@@ -1,4 +1,6 @@
-Paulo Alves
+Aula 01
+
+Instrutor: Paulo Alves
 
 Serialization
 - implements Serializable
@@ -27,3 +29,12 @@ Enterprise Java Bean (EJB)
 [CarrinhoBean]
 @Remote(Carrinho.class)
 @Stateful
+
+===========================================================
+Aula 02
+
+EJB 2.1  --> utiliza RMI
+EJB 3.0+ --> serialização
+
+jboss/bin/standalone.sh -b 0.0.0.0
+
