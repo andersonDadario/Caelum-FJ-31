@@ -9,14 +9,16 @@ import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.ejb.Remote;
 import javax.ejb.Remove;
-import javax.ejb.Stateful;
 import javax.ejb.StatefulTimeout;
+import javax.ejb.Stateless;
 
 import org.jboss.ejb3.annotation.Cache;
+import org.jboss.ejb3.annotation.Pool;
 
 import br.com.caelum.loja.entity.Livro;
 
-@Stateful
+@Stateless
+@Pool("slsb-strict-max-pool")
 @Remote(Carrinho.class)
 @Cache("passivating")
 @StatefulTimeout(value=20, unit=TimeUnit.SECONDS)

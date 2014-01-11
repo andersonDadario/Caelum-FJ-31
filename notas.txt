@@ -44,3 +44,7 @@ Ciclo de vida um EJB Stateful
 @PostActivate
 @Remove
 @PreDestroy
+
+Ciclo de vida de um EJB Stateless
+@PostConstruct
+@PreDestroy
