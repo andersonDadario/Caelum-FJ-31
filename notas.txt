@@ -52,3 +52,5 @@ Ciclo de vida de um EJB Stateless
 
 @Remote VS @Local
 - @Local deve ser utilizado quando o Bean está na mesma JVM
+
+JPA > Entity Manager --- Livro
