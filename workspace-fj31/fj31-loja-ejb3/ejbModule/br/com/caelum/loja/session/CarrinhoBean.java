@@ -5,24 +5,25 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import javax.annotation.PreDestroy;
+import javax.ejb.EJB;
 import javax.ejb.PostActivate;
 import javax.ejb.PrePassivate;
 import javax.ejb.Remote;
 import javax.ejb.Remove;
+import javax.ejb.Stateful;
 import javax.ejb.StatefulTimeout;
-import javax.ejb.Stateless;
 
 import org.jboss.ejb3.annotation.Cache;
-import org.jboss.ejb3.annotation.Pool;
 
 import br.com.caelum.loja.entity.Livro;
 
-@Stateless
-@Pool("slsb-strict-max-pool")
+@Stateful
 @Remote(Carrinho.class)
 @Cache("passivating")
 @StatefulTimeout(value=20, unit=TimeUnit.SECONDS)
 public class CarrinhoBean implements Carrinho {
+	@EJB
+	private Mensageiro mensageiro;
 
 	private double total;
 	private List<Livro> livros = new ArrayList<Livro>();
@@ -61,6 +62,8 @@ public class CarrinhoBean implements Carrinho {
 		for (Livro livro : this.livros) {
 			System.out.println("Comprando livro: " + livro.getNome());
 		}
+		
+		this.mensageiro.enviaMensagem(this.livros);
 	}
 	
 	@PreDestroy

@@ -24,6 +24,6 @@ public class ClienteCarrinhoBeanRemovido {
 		
 		System.out.println("compra finalizada");
 		
-		carrinho.addLivro(l1);
+		//carrinho.addLivro(l1);
 	}
 }

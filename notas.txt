@@ -48,3 +48,7 @@ Ciclo de vida um EJB Stateful
 Ciclo de vida de um EJB Stateless
 @PostConstruct
 @PreDestroy
+
+
+@Remote VS @Local
+- @Local deve ser utilizado quando o Bean está na mesma JVM
