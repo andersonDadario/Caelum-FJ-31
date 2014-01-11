@@ -38,3 +38,9 @@ EJB 3.0+ --> serialização
 
 jboss/bin/standalone.sh -b 0.0.0.0
 
+Ciclo de vida um EJB Stateful
+@PostConstruct
+@PrePassive
+@PostActivate
+@Remove
+@PreDestroy
