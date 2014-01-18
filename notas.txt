@@ -54,3 +54,9 @@ Ciclo de vida de um EJB Stateless
 - @Local deve ser utilizado quando o Bean está na mesma JVM
 
 JPA > Entity Manager --- Livro
+
+
+
+Aula 03
+Lazy X Eager
+hbm2ddl.auto -> (create-drop, create, update)
