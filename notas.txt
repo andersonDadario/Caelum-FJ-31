@@ -60,3 +60,17 @@ JPA > Entity Manager --- Livro
 Aula 03
 Lazy X Eager
 hbm2ddl.auto -> (create-drop, create, update)
+
+====================================
+
+
+Fila X Tópico
+
+Fila garante entrega e espera o processamento
+Tópico replica mensagem para N subscribers
+
+Fila = envio de email
+Tópico = lista de discussão
+
+> Autenticação remota?
+> Criptografia do meio?
